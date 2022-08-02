@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-attachment: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-app {
+    width: 520px;
+    min-height: 600px;
+    margin: 128px auto;
+    background-color: #f8f9fa;
+    border-radius: 0.4rem;
+    padding: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/**** Todo Title ****/
+
+.todo-title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.25rem;
+    color: #007bff;
+    gap: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+/**** Todo Input Form ****/
+
+.todo-add-form {
+    padding: 0 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-add-input {
+    border: none;
+}
+
+.todo-add-input:focus,
+.todo-add-button:focus {
+    box-shadow: none !important;
+}
+
+/**** Todo Item ****/
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.15rem;
+    margin-top: 1rem;
+    padding: 0 3rem;
+}
+
+.todo-item-check {
+    padding: 0;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.todo-item-text {
+    padding: 0 1rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.todo-item-actions {
+    padding-right: 0;
+}
+
+.todo-item-edit,
+.todo-item-delete {
+    cursor: pointer;
+    font-size: 1rem;
 }
